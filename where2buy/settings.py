@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'where2buy-test.azurewebsites.net',
+    'where2buy.azurewebsites.net',
 ]
 
 
