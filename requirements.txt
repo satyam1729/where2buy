@@ -1,3 +1,2 @@
 django==1.9.12
 requests
-urllib3[secure]
