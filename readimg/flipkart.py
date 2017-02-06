@@ -9,5 +9,7 @@ def flipkartsearch(text):
 	r = requests.get(url, headers=headers).json()
 	title=r['productInfoList'][0]['productBaseInfoV1']['title']
 	price=r['productInfoList'][0]['productBaseInfoV1']['flipkartSpecialPrice']['amount']
-	return title,price
-#print flipkartsearch('sony+mobile')[0]
+	currency=r['productInfoList'][0]['productBaseInfoV1']['flipkartSpecialPrice']['currency']
+	link=r['productInfoList'][0]['productBaseInfoV1']['productUrl']
+	return title,price,currency,link	
+#print flipkartsearch('sony+mobile')
