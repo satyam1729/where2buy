@@ -1,10 +1,10 @@
 #u can add price comparision for lower price search
 
-import json
-import requests
-headers = {'Fk-Affiliate-Id':'satyam66h','Fk-Affiliate-Token':'1454d0d14f774904a1c9bc2a7b924923'}
 
 def flipkartsearch(text):
+	import json
+	import requests
+	headers = {'Fk-Affiliate-Id':'satyam66h','Fk-Affiliate-Token':'1454d0d14f774904a1c9bc2a7b924923'}
 	url='https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query='+text+'&resultCount=1'
 	r = requests.get(url, headers=headers).json()
 	title=r['productInfoList'][0]['productBaseInfoV1']['title']
@@ -12,4 +12,4 @@ def flipkartsearch(text):
 	currency=r['productInfoList'][0]['productBaseInfoV1']['flipkartSpecialPrice']['currency']
 	link=r['productInfoList'][0]['productBaseInfoV1']['productUrl']
 	return title,price,currency,link	
-#print flipkartsearch('sony+mobile')
+print flipkartsearch('sony+mobile')
