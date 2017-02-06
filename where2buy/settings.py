@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'where2buy-test.azurewebsites.net',
     'where2buy.azurewebsites.net',
+    '127.0.0.1'
 ]
 
 

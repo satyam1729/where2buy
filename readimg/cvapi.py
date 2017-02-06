@@ -13,7 +13,7 @@ def cogcv(img):
         'detectOrientation ': 'true',
     })
 
-    #data = open(img, 'rb').read()
+    img = open(img, 'rb').read()
     try:
         conn = httplib.HTTPSConnection('api.projectoxford.ai')
         conn.request("POST", "/vision/v1.0/ocr?%s" % params, img, headers)
@@ -27,8 +27,8 @@ def cogcv(img):
                 jsonl2=item1['words']
                 for item2 in jsonl2:
                     t=item2['text']
-                    string=string+t+'+'
-                return string    
+                    string=string+t+'+'    
         conn.close()
+        return string
     except:
-        return 'sony+mobile'    
+        return none   
