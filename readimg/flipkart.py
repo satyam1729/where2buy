@@ -12,4 +12,4 @@ def flipkartsearch(text):
 	currency=r['productInfoList'][0]['productBaseInfoV1']['flipkartSpecialPrice']['currency']
 	link=r['productInfoList'][0]['productBaseInfoV1']['productUrl']
 	return title,price,currency,link	
-print flipkartsearch('sony+mobile')
+#print flipkartsearch('sony+mobile')
