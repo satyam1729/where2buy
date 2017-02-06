@@ -25,7 +25,11 @@ SECRET_KEY = 'ne@qz@*259!!-5--0@)ub_n_!6nkpruu9^*%p-#k)_y-lc-vi3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'where2buy-test.azurewebsites.net',
+    'where2buy.azurewebsites.net',
+]
 
 
 # Application definition
