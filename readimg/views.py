@@ -9,7 +9,7 @@ from flipkart import flipkartsearch
 def detect(request):
 	# initialize the data dictionary to be returned by the request
 	data = {"success": False}
-	reqd = {"got": "none"}
+	#reqd = {"got": "none"}
 	img='readimg/image.png'.decode('base64')
 	# check to see if this is a post request
 	if request.method == "POST":
@@ -34,14 +34,19 @@ def detect(request):
 		# update the data dictionary
 		
 		text=cogcv('imagedata.jpg')
+		data = {"text": text}
 		if text	is None:
-			return JsonResponse(data)
+			return JsonResponse(data)		
 		data["success"] = True
-		reqd['got']=flipkartsearch(text)
+		tup=flipkartsearch(text)
+		data['title']=tup[1]
+		data['amount']=tup[2]
+		data['curr']=tup[3]
+		data['link']=tup[4]
 
 	# return a JSON response
-	#return JsonResponse(data)
-	return JsonResponse(reqd)
+	return JsonResponse(data)
+	#return JsonResponse(reqd)
 def _grab_image(stream=None, url=None):
 	# if the path is not None, then load the image from disk
 	
