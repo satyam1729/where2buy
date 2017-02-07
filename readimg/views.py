@@ -5,6 +5,7 @@ import json
 import base64
 from cvapi import cogcv
 from flipkart import flipkartsearch
+from amazon import bing_search
 @csrf_exempt
 def detect(request):
 	# initialize the data dictionary to be returned by the request
@@ -43,6 +44,7 @@ def detect(request):
 		data['amount']=tup[2]
 		data['curr']=tup[3]
 		data['link']=tup[4]
+		data['amazonlink']=bing_search(text+'amazon')
 
 	# return a JSON response
 	return JsonResponse(data)
