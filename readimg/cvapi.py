@@ -4,7 +4,7 @@ def cogcv(img):
     headers = {
         # Request headers
         'Content-Type': 'application/octet-stream',
-        'Ocp-Apim-Subscription-Key': 'cb61b5c2179546faa37990d0962cbccf',
+        'Ocp-Apim-Subscription-Key': 'cb61b5c2179546faa37990d0962cbccf', #change key
     }
 
     params = urllib.urlencode({
