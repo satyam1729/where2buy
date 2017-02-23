@@ -6,6 +6,7 @@ def bing_search(query):
     # query string parameters
     	payload = {'q': query}
     # custom headers
+    # change key for use
     	headers = {'Ocp-Apim-Subscription-Key': '8a4c7e6ad5694d4f960334295d01c3e4'}
     # make GET request
     	r = requests.get(url, params=payload, headers=headers)
